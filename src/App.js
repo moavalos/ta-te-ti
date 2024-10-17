@@ -15,7 +15,7 @@ function Square({ value, onSquareClick }) {
 /* alterna entre x y o y se encarga de los cliks*/
 function Board({ xIsNext, squares, onPlay }) {
   // se maneja el fucking click. si ya hay un ganador o el cuadrado está ocupado, no hace nada.
-  function handleClick(i) {
+  function handleClick(i) { // función que se ejecuta cuando ocurre un evento en un elemento del DOM
     if (calculateWinner(squares) || squares[i])
       return;
 
@@ -131,4 +131,7 @@ function calculateWinner(squares) {
     }
   }
   return null; 
+
+  /*OTROS CONCEPTOS
+  Fragment; es un componente desarrollado por js para agrupar elementos sin introducir elementos extra a nivel de DOM. se usa como etiqueta */
 }
